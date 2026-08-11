@@ -19,11 +19,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies (avoid optional native bindings)
+      - name: Clean and install dependencies (no optional native bindings)
         run: |
-          # remove lockfile to avoid npm optional-deps bug, then install without optional deps
-          rm -f package-lock.json
-          npm ci --no-optional || npm install --no-optional
+          rm -rf node_modules package-lock.json
+          npm cache clean --force || true
+          npm install --omit=optional --no-audit --no-fund
 
       - name: Build web assets
         run: npm run build
