@@ -1,6 +1,10 @@
-name: Build Android APK (manual)
+name: Build Android APK
 
 on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       sign:
@@ -30,11 +34,11 @@ jobs:
       - name: Build web assets
         run: npm run build
 
-      - name: Setup Java (JDK 11)
+      - name: Setup Java (JDK 17)
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version: '17'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
@@ -65,7 +69,7 @@ jobs:
         run: |
           npx cap sync android
           cd android
-          ./gradlew assembleRelease -Pci
+          ./gradlew assembleRelease -Pci --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
