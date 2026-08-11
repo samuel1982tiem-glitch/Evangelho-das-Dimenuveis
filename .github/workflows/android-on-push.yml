@@ -23,7 +23,7 @@ jobs:
         run: |
           rm -rf node_modules
           npm cache clean --force || true
-          npm ci --no-audit --no-fund
+          npm install --include=optional --no-audit --no-fund
 
       - name: Build web assets
         run: npm run build
