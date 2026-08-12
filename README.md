@@ -1,5 +1,7 @@
 # Evangelho das Dimenúveis — Tarô & Prática Contemplativa
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 > *"Não prevê. Reconhece. Cada Dimenúvel contém todas as outras."*
 
 ---
