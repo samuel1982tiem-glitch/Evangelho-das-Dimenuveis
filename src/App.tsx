@@ -66,7 +66,7 @@ const MainContent: React.FC = () => {
         <div className="flex items-center justify-center gap-3 text-[11px] text-neutral-400 pt-1">
           <span>© Evangelho das Dimenúveis</span>
           <span className="text-[#c5a059]/40">•</span>
-          <span className="text-neutral-500 font-mono text-[10px] bg-neutral-900/80 px-1.5 py-0.5 rounded border border-neutral-800/80">v1.0.1</span>
+          <span className="text-neutral-500 font-mono text-[10px] bg-neutral-900/80 px-1.5 py-0.5 rounded border border-neutral-800/80">v1.0.3</span>
           <span className="text-[#c5a059]/40">•</span>
           <a
             href={`mailto:samuel.tiem@proton.me?subject=${encodeURIComponent('Evangelho das Dimenúveis')}`}
